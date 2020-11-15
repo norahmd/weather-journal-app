@@ -1,6 +1,6 @@
 /* Global Variables */
 const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?zip='
-const apiKey = '&appid=c331803b5ffd1d905064a646bfd65f9b'
+const apiKey = '&appid=c331803b5ffd1d905064a646bfd65f9b&units=metric'
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -59,7 +59,7 @@ const postDataToServer = async (url='', data = {})=>{
 }
 
 const reflectData = async () => {
-    
+
     const request = await fetch('/get-weather');
     try{
       const weather = await request.json();
